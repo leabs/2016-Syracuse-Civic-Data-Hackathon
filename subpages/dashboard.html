@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://use.typekit.net/ztu7pnx.js"></script>
+
+
+    <title>Syracuse Roads Dashboard</title>
+
+    <!--Maps API-->
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3"></script>
+    <!--d3js-->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+    <!--Bootstrap-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
+
+
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+
+        <div class="row row-flex row-flex-wrap">
+
+            <div class="col-md-2">
+                <div class="panel panel-default flex-col">
+                    <div class="panel-heading">
+                        <h4>Department of Public Works</h4></div>
+                    <div class="panel-body flex-grow">
+                        <ul>
+                            <li>
+                                <a href="../index.html">Back home</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-5">
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            </div>
+            <div class="col-md-5">
+
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            </div>
+
+        </div>
+        <!--/row-->
+
+        <div class="row row-flex row-flex-wrap">
+            <div class="col-md-4">
+                <div class="panel panel-default flex-col">
+
+                    <div class="panel-body flex-grow">Content here -- div with .flex-grow</div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+
+                <canvas id="ratingChart" height="350" width="350"></canvas>
+
+            </div>
+            <div class="col-md-4">
+
+                <canvas id="pieChart2" height="300" width="300"></canvas>
+
+            </div>
+
+        </div>
+        <!--/row-->
+
+        <div class="row row-flex row-flex-wrap">
+            <div class="col-md-2">
+                <div class="panel panel-default flex-col">
+
+                    Road Search
+
+
+<input type="text" name="FirstName" placeholder="Search for Road Name">
+                </div>
+            </div>
+
+            <div class="col-md-10 searching">
+
+              <table style="width:100%">
+
+              <tr>
+                <th>Street Name</th>
+                <th>Block</th>
+                <th>Overall Rating</th>
+                <th>Last Overlay</th>
+                <th>Class</th>
+                <th>Pavement</th>
+                <th>Street ID</th>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+              <tr>
+                <td>KINGSLEY</td>
+                <td>0</td>
+                <td>5</td>
+                <td>Unknown</td>
+                <td>Local</td>
+                <td>Unknown</td>
+                <td>12572861</td>
+              </tr>
+            </table>
+
+            </div>
+
+        </div>
+        <!--/row-->
+    </div>
+
+
+
+
+
+    <script src="../js/ratings.js"></script>
+    <script src="../js/pavement.js"></script>
+    <script src="../js/pavement2001.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+</body>
+
+</html>
