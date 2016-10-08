@@ -4,9 +4,9 @@ let myPieChart = new Chart(RATING2,{
     type: 'pie',
     data: {
     labels: [
-        "3 or less inches of asphalt, no base",
-        "Full depth asphalt (7+ inches) no base",
-        "3+ inches asphalt over concrete"
+        '3 < " asphalt, no base',
+        'Full depth asphalt no base',
+        '3 + "asphalt over base'
     ],
     datasets: [
         {

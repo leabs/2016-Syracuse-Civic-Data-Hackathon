@@ -2,79 +2,283 @@
 <html>
 
 <head>
+	<meta charset='UTF-8'>
+	<meta name='keywords' content='your, tags'>
+	<meta name='description' content='150 words'>
+	<meta name='subject' content='subject'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <script src="https://use.typekit.net/ztu7pnx.js"></script>
+	<!--ListJs-->
+	<script src="http://listjs.com/no-cdn/list.js"></script>
 
+	<!--Jquery-->
+	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 
-    <title>2016 Road Report</title>
+	<!--Bootstrap-->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 
-    <!--Maps API-->
-    <script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3"></script>
-    <!--d3js-->
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <!--JQuery-->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
-    <!--Bootstrap-->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+	<!--Font Awesome-->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+	<title>Roads Dashboard</title>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#memberModal').modal('show');
+		});
+	</script>
+
 
 </head>
 
 <body>
-    <nav class="menu" tabindex="0">
-        <div class="smartphone-menu-trigger"></div>
-        <header class="avatar">
-            <img src="images/logo.jpg" />
-            <h4>Roads Dashboard</h4>
-        </header>
-        <ul>
-            <li tabindex="0" class="icon-info"><span>About This Project</span></li>
-            <li tabindex="0" class="icon-dashboard"><a href="subpages/map.html"><span>Pothole Map (Public)</span></a></li>
-            <li tabindex="0" class="icon-lineChart"><a href="subpages/ratings.html"><span>Road Data (Public)</span></a></li>
-            <li tabindex="0" class="icon-barGraph"><a href="subpages/dashboard.html"><span>Admin Dashboard (Private)</span></a></li>
-            <li tabindex="0" class="icon-users"><a href="subpages/about.html"><span>About Me</span></a></li>
-        </ul>
-    </nav>
+	<!-- Modal -->
+<!--
+	<div class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+					<h4 class="modal-title" id="memberModalLabel">The Syracuse Roads Dashboard</h4>
 
-    <main>
-        <h1>Purpose</h1>
-        <p style="text-indent: 50px;">
-            We can better understand data that has been recorded by various entities of our local government with data visualization. The result of this is painting a picture of trends and usage of local resources. For local officals this data can be helpful as an
-            overview of the past years and as a benchmark for years to come. Make this dashboard publically available and you will create a discussion amongst tax payers on the budget as well as put their minds at ease by showing them how their tax dollars
-            are being spent.
-        </p>
-        <p style="text-indent: 50px;">
-            While data collected on our roadways is publically available on websites such as <a href="http://www.data.gov" target="_blank">www.data.gov</a>, that data can be too abstract to comprehend. The road ratings spread sheet included with this project is 4,867 rows of data
-            ranking various elements of that road way on a numbered scale. Even more abstract is the spread sheet of 7,393 GPS coordinates for potholes filled in Syracuse. We cannot see the scope of this data until applying it to a chart or graph. The
-            GPS coordinates have no tangible value in our minds until we apply them to a map.
-        </p>
-
-        <p style="text-indent: 50px;">
-          Here are a few key strengths of a dashboard site like this:
-        </p>
-        <ul class="purposeList">
+				</div>
+				<div class="modal-body">
+					<p>We can better understand data with visualization. The result of this is painting a picture of trends and usage of resources by connecting data tables to various frameworks and libraries. For local officals this data can be helpful as an overview of the
+						past years and as a benchmark for years to come.</p>
 
 
-            <li>
-                <strong>Accessibility </strong>- This dashboard is accessible to all modern web browsers, the only requirement being an active internet connection to retrieve data, APIs, and frameworks / libraries that are hosted online. This dashboard works on desktop,
-                tablet, and mobile in a responsive design. No installing an app or confusing program with pages of documentation to see the data. You just load the webpage. This makes it accessible to all citizens of the area as well as city staff who use this data to work and plan.
-            </li>
-            <li>
-                <strong>Sustainability </strong>- The charts can be easily updated within their seperate Javascript files. So when year end comes we can work with the data and update these charts within an hour or two. It could also be linked to exsisting data tables to automatically generate content.
-            </li>
-            <li>
-                <strong>Scalability </strong>- This dashboard is scalable and adding new content is easy.
-            </li>
-            <li>
-                <strong>All API and library elements are open source!</strong>
-            </li>
-        </ul>
-    </main>
+					<p>
+						This project solves the following problems:
+					</p>
+					<ul style="list-style:none;">
+						<li><strong>Visualization</strong> - Putting our data to work will help us organize and plan. </li>
+						<li><strong>Accessibility</strong> - The only requirement is an internet connection, this works on desktop or mobile. </li>
+						<li><strong>Sustainability </strong>- The charts can be easily updated within their seperate Javascript files and can be linked to exsisting data tables to automtically generate content.</li>
+						<li><strong>Scalability</strong> - This dashboard is scalable and adding new content is easy.</li>
+
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>-->
+
+	<!--PAGE CONTENT-->
+	<div class="container-fluid">
+		<div class="tabbable tabs-vertical tabs-right">
+			<ul id="myTab" class="nav nav-tabs">
+				<li class="active">
+					<a href="#dash" data-toggle="tab"><i class="fa fa-home" aria-hidden="true"></i> Dashboard </a>
+				</li>
+				<li>
+					<a href="#search" data-toggle="tab"><i class="fa fa-search" aria-hidden="true"></i> Road Search</a>
+				</li>
+				<li>
+					<a href="map.html"><i class="fa fa-map" aria-hidden="true"></i> Pothole Map</a>
+				</li>
+				<li>
+					<a href="#about" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> About</a>
+				</li>
+
+			</ul>
+			<div id="myTabContent" class="tab-content">
+				<div class="tab-pane fade in active" id="dash">
+					<div class="row placeholders">
+
+						<!--Graph 3-->
+						<div class="col-xs-12 col-md-8 leftSide">
+							<h3 class="page-header">Department	of	Public	Works <small> | Street	Repair	Division</small></h3>
+
+							<h3 class="page-header">Information</h3>
+					<ul>
+						<li>
+							Employee Contact Info
+						</li>
+						<li>
+							Vendor Contact Info
+						</li>
+						<li>
+							Employee Schedule
+						</li>
+						<li>
+							Policies and Forms
+						</li>
+						<li>
+							Misc. Documents
+						</li>
+						<li>
+							Company E-Mail Sign on
+						</li>
+						<li>
+							Payroll Information
+						</li>
+						<li>
+							Benefits Information
+						</li>
+						<li>
+							Compliance
+						</li>
+					</ul>
+							<h4 class="page-header">This Week </h4>
+							<table class="jobList">
+
+								<tr><th>Date</th><th>Name</th><th>Team</th><th>Job</th></tr>
+								<tr class="blueTeam"><td>10/14/16</td><td>Salina</td><td>Blue</td><td>Overlay</td></tr>
+								<tr class="redTeam"><td>10/14/16</td><td>Kingsley</td><td>Red</td><td>Repairs</td></tr>
+								<tr class="greenTeam"><td>10/14/16</td><td>Columbus</td><td>Green</td></td><td>Brush</td></tr>
+								<tr>
+								</table>
+								<br  />
+								<h4 class="page-header">Next Week </h4>
+								<table class="jobList">
+
+									<tr><th>Date</th><th>Name</th><th>Team</th><th>Job</th></tr>
+								<tr class="redTeam"><td>10/17/16</td><td>Oak</td><td>Red</td><td>Overlay</td></tr>
+								<tr class="blueTeam"><td>10/17/16</td><td>Willow</td><td>Blue</td><td>Sweep</td></tr>
+								<tr class="greenTeam"><td>10/17/16</td><td>Grant</td></td><td>Green</td><td>Repairs</td></tr>
+								<tr class="blueTeam"><td>10/14/16</td><td>Salina</td><td>Blue</td><td>Overlay</td></tr>
+								<tr class="redTeam"><td>10/14/16</td><td>Kingsley</td><td>Red</td><td>Repairs</td></tr>
+								<tr class="greenTeam"><td>10/14/16</td><td>Columbus</td><td>Green</td></td><td>Brush</td></tr>
+								<tr class="redTeam"><td>10/17/16</td><td>Oak</td><td>Red</td><td>Overlay</td></tr>
+							</table>
+			<br />
+			<br />
+
+
+						</div>
+
+
+
+
+
+						<!--Graph 2-->
+						<div class="col-xs-12 col-sm-6 col-md-4 placeholder">
+							<h3 class="page-header">Current Road Stats </h3>
+							<canvas id="pieChart" height="200" width="200"></canvas>
+							<canvas id="overlay" height="500" width="1000"></canvas>
+						</div>
+
+					</div>
+
+
+
+
+				</div>
+
+				<!--Search-->
+				<div class="tab-pane fade" id="search">
+					<div id="hackers">
+						<div class="searchbox">
+							<input autosave="save" class="search" name="s" placeholder="Search..." results="5" type="search" /></div>
+
+						<div class="list-header">
+							<button class="sort" data-sort="roadName">Sort by Name</button>
+							<button class="sort" data-sort="desc"> Sort by Street ID </button>
+						</div>
+
+						<ul class="list">
+
+						</ul>
+					</div>
+				</div>
+
+				<!--Map-->
+				<div class="tab-pane fade" id="map">
+
+					<div id="googft-mapCanvas"></div>
+
+				</div>
+
+
+				<div class="tab-pane fade" id="about">
+
+					<h2 class="page-header">About Me</h2>
+					<div class="row">
+
+
+						<div class="col-md-4">
+
+							<img src="images/me.jpg" alt="My picture" class="myPicture" />
+						</div>
+						<div class="col-md-8">
+							<br />
+							<blockquote>
+								<p style="text-indent: 50px;">
+									I'm a 30 year old tech fan living in Baldwinsville, NY. I have been working with computers extensively since I was 16. I have held numerous jobs dealing with PC support and maintenance, but never in web development. I took classes at SUNY OCC for Web
+									Technologies including Web Design, Javascript, PHP, and Server Administration. When I'm not working my day job I like to work on small projects for web development, take courses online, and spend time with my daughter Lily and wife Vanessa. Check
+									out some random things
+									<a href="http://codepen.io/leab/pens/public/?grid_type=list" target="_blank">here on my codepen.io account.</a>
+								</p>
+								<p>
+									I also have a <a href="https://github.com/leabs" target="_blank">GitHub</a> account and a <a href="http://stevenleabo.com/" target="_blank">personal webpage</a> you can visit.
+								</p>
+							</blockquote>
+						</div>
+					</div>
+
+
+					<hr>
+
+
+
+					<h2>What I Used</h2>
+
+					<p>
+						Here are some things I used that allowed me to create this project.
+					</p>
+					<br />
+					<ul>
+						<li><strong>Atom and Sublime Text</strong> <a href="https://atom.io/" target="_blank">Atom</a> had some packages <a href="https://www.sublimetext.com/" target="_blank">Sublime Text</a> didn't and vice versa. Atom Beautify, Emmet, and Sublime's excellent
+							multi-line selection support were life savers when working with 7,000+ rows of data. For most of the charts I copied whole columns of data and then used the COUNTIF function in Google Sheets to add up the amounts for the graphs.</li>
+						<li>
+							<p><strong>Google Maps API</strong> <a href="https://developers.google.com/maps/" target="_blank">Google Maps API</a> is a deep awesome API with a lot of options and customization. </p>
+						</li>
+						<li>
+							<p><strong>Other Google Apps!</strong> <a href="https://support.google.com/fusiontables/answer/2571232?hl=en" target="_blank">Google Fusion Tables</a>,
+								<a href="https://www.google.com/sheets/about/" target="_blank">Google Sheets</a> mainly.</p>
+						</li>
+						<li>
+							<p><strong>Chart.Js</strong> An easy to use Javascript library to map data to various styles of chart. </p>
+						</li>
+						<li>
+							<p>
+								<strong>D3js</strong> An extremely deep Javascript library to display data. I started working with this and realized it at times was too deep and Chart.Js was better suited for this project. Still neat to learn about and see. Check out some amazing
+								examples <a href="https://github.com/d3/d3/wiki/Gallery" target="_blank">here.</a>
+							</p>
+						</li>
+						<li>
+							<p><strong>List.Js</strong> Sorting and searching through list
+								<a href="http://www.listjs.com/" target="_blank">made fast and easy. </a></p>
+						</li>
+						<li>
+							<p>
+								<strong>Bootstrap</strong> Responsive webpages are created faster using <a href="http://getbootstrap.com/">Bootstrap</a>. Knowing bootstrap class names saves a lot of time, too.
+							</p>
+						</li>
+
+					</ul>
+
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+	<script src="js/ratings.js"></script>
+	<script src="js/pavement.js"></script>
+	<script src="js/overlay.js"></script>
+	<script src="js/pavement2001.js"></script>
+	<script src="js/listing.js"></script>
 </body>
 
 </html>
