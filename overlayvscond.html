@@ -1,0 +1,39 @@
+
+<html>
+<head>
+  <style>
+  html,body,#scatterplot {
+
+	width: 90%;
+	height: 90%;
+	margin: 0 auto;
+	padding:0;
+
+}
+
+#scatterplot svg {
+
+	display:block;
+
+}
+
+h1, h2{
+  text-align:center;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://cdn.jsdelivr.net/d3js/latest/d3.min.js" charset="utf-8"></script>
+<script src="http://cdn.jsdelivr.net/underscorejs/latest/underscore-min.js" type="text/javascript"></script>
+<script src="http://cdn.jsdelivr.net/taucharts/latest/tauCharts.min.js" type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/taucharts/latest/tauCharts.min.css">
+
+</head>
+
+<body>
+  <h1>Overlay Year vs. Road Condition</h1>
+<div id="scatterplot"></div>
+
+<script type="text/javascript" src="roadData.js"></script>
+</body>
+</html>
