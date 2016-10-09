@@ -216,6 +216,15 @@ footer {
 .page-header {
   margin-top: 10px;
 }
+.title{
+  color:#337ab7;
+  display:inline-block;
+  padding-left:100px;
+}
+
+.sub-heading{
+
+}
 
 .placeholders {
   margin-bottom: 30px;
@@ -262,7 +271,7 @@ h2.page-header, h3.page-header, h4.page-header{
   max-height:200px;
   display:block;
   margin:auto;
-  margin-top:15px;
+  margin-top:5px;
   border-radius:200px;
 }
 .leftSide{
@@ -282,6 +291,10 @@ h2.page-header, h3.page-header, h4.page-header{
   padding-right:30px;
 }
 
+#mobileWarning{
+  display:none;
+}
+
 .blueTeam{
   color:blue;
 }
@@ -299,4 +312,66 @@ h2.page-header, h3.page-header, h4.page-header{
 }
 .completed{
   display:inline-block;
+}
+#scatterplot  {
+  width: 90%;
+	height: 860px;
+	margin: 0 auto;
+	padding:0;
+}
+
+#scatterplot svg {
+	display:block;
+}
+
+#scatterplotHeading{
+  padding-left:120px;
+  color:#888;
+  padding-bottom:10px;
+}
+.topSubHeading{
+  color:#888;
+  display:inline-block;
+  padding-left:10px;
+}
+.chartHeading{
+  color:#888;
+}
+
+.list li:nth-child(odd) {
+    background: skyblue;
+}
+
+@media (max-width: 740px) {
+  div.container-fluid {
+    padding:6px;
+  }
+
+  #scatterplot{
+    display:none;
+  }
+  #scatterplot svg{
+    display:none;
+  }
+  #scatterplotHeading{
+    display:none;
+  }
+  #mobileWarning{
+    display:block;
+    color:#333;
+    padding:20px;
+    text-align: center;
+    font-size:1.4em;
+  }
+  .topSubHeading{
+    display:none;
+  }
+  .title{
+    padding-left:5px;
+  }
+}
+@media (min-width: 739px) {
+  #mobileWarning{
+    display:none;
+  }
 }
