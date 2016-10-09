@@ -251,6 +251,15 @@ footer {
 .page-header {
     margin-top: 10px;
 }
+.title{
+  color:#337ab7;
+  display:inline-block;
+  padding-left:100px;
+}
+
+.sub-heading{
+
+}
 
 .title {
     color: #337ab7;
@@ -354,9 +363,19 @@ h2.page-header, h3.page-header, h4.page-header {
 .jobList tr {
     border-bottom: 1px solid #eee;
 }
+<<<<<<< HEAD
 
 .completed {
     display: inline-block;
+=======
+.myPicture{
+  max-width:200px;
+  max-height:200px;
+  display:block;
+  margin:auto;
+  margin-top:5px;
+  border-radius:200px;
+>>>>>>> origin/master
 }
 
 #scatterplot {
@@ -382,8 +401,17 @@ h2.page-header, h3.page-header, h4.page-header {
     padding-left: 10px;
 }
 
+<<<<<<< HEAD
 .chartHeading {
     color: #888;
+=======
+#mobileWarning{
+  display:none;
+}
+
+.blueTeam{
+  color:blue;
+>>>>>>> origin/master
 }
 
 .list tr:nth-child(odd) {
@@ -435,4 +463,66 @@ th {
     #mobileWarning {
         display: none;
     }
+}
+#scatterplot  {
+  width: 90%;
+	height: 860px;
+	margin: 0 auto;
+	padding:0;
+}
+
+#scatterplot svg {
+	display:block;
+}
+
+#scatterplotHeading{
+  padding-left:120px;
+  color:#888;
+  padding-bottom:10px;
+}
+.topSubHeading{
+  color:#888;
+  display:inline-block;
+  padding-left:10px;
+}
+.chartHeading{
+  color:#888;
+}
+
+.list li:nth-child(odd) {
+    background: skyblue;
+}
+
+@media (max-width: 740px) {
+  div.container-fluid {
+    padding:6px;
+  }
+
+  #scatterplot{
+    display:none;
+  }
+  #scatterplot svg{
+    display:none;
+  }
+  #scatterplotHeading{
+    display:none;
+  }
+  #mobileWarning{
+    display:block;
+    color:#333;
+    padding:20px;
+    text-align: center;
+    font-size:1.4em;
+  }
+  .topSubHeading{
+    display:none;
+  }
+  .title{
+    padding-left:5px;
+  }
+}
+@media (min-width: 739px) {
+  #mobileWarning{
+    display:none;
+  }
 }
