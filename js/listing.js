@@ -4882,16 +4882,10 @@ $(function() {
     var ul = jQuery('ul.list');
     jQuery.each( values, function( i, item ) {
       ul.append(
-<<<<<<< HEAD
 
-        "<tr class='block'>" +
-        "<td class='block'>" + item.roadname + "</td>" +
-        "<td class='block'>" + item.type + "</td>" +
-=======
         "<tr class='list-item'>" +
         "<td class='roadname'>" + item.roadname + "</td>" +
         "<td class='desc'>" + item.type + "</td>" +
->>>>>>> origin/master
         "<td class='block'>" + item.block + "</td>" +
         "<td class='block'>" + item.pavement + "</td>" +
         "<td class='block'>" + item.lastoverlay + "</td>" +
@@ -4903,12 +4897,9 @@ $(function() {
     });
 
     var options = {
-<<<<<<< HEAD
+
       valueNames: [ 'roadname', 'type', 'block', 'pavement','lastoverlay', 'rating', 'streetid', 'flushoil' ]
-=======
-      valueNames: [ 'roadname', 'desc', 'block' ]
->>>>>>> origin/master
-    };
+ };
 
     var roadList = new List('roads', options);
     roadList.on('updated', emptyListMsg);

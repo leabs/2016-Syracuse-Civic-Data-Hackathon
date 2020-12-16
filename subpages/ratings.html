@@ -2,8 +2,6 @@
 <html>
 
 <head>
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
@@ -18,13 +16,15 @@
     <!--d3js-->
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <!--JQuery-->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
     <!--Bootstrap-->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
-
-
 </head>
 
 <body>
@@ -35,11 +35,12 @@
             <h4>Roads Dashboard</h4>
         </header>
         <ul>
-          <li tabindex="0" class="icon-info"><a href="../index.html"><span>About This Project</span></a></li>
-          <li tabindex="0" class="icon-dashboard"><a href="map.html"><span>Pothole Map (Public)</span></a></li>
-          <li tabindex="0" class="icon-lineChart"><span>Road Data (Public)</span></li>
-          <li tabindex="0" class="icon-barGraph"><a href="dashboard.html"><span>Admin Dashboard (Private)</span></a></li>
-          <li tabindex="0" class="icon-users"><a href="about.html"><span>About Me</span></a></li>
+            <li tabindex="0" class="icon-info"><a href="../index.html"><span>About This Project</span></a></li>
+            <li tabindex="0" class="icon-dashboard"><a href="map.html"><span>Pothole Map (Public)</span></a></li>
+            <li tabindex="0" class="icon-lineChart"><span>Road Data (Public)</span></li>
+            <li tabindex="0" class="icon-barGraph"><a href="dashboard.html"><span>Admin Dashboard (Private)</span></a>
+            </li>
+            <li tabindex="0" class="icon-users"><a href="about.html"><span>About Me</span></a></li>
         </ul>
     </nav>
 
@@ -48,10 +49,14 @@
             <div class="col-md-6">
                 <h1>Overall Road Ratings</h1>
                 <p style="text-indent: 50px;">
-                    Here is an overview of the last three years of road ratings collected from the <a href="https://cityofsyracuse.github.io/RoadsChallenge/roadratings.html"> Road Ratings .csv files.</a>
+                    Here is an overview of the last three years of road ratings collected from the <a
+                        href="https://cityofsyracuse.github.io/RoadsChallenge/roadratings.html"> Road Ratings .csv
+                        files.</a>
                 </p>
                 <p style="text-indent: 50px;">
-                    The general tread is most of our roads are in the middle of the ratings scale. After compiling three years of data I felt like it was ok to stop there as the tread was seen each year. Each of these lines represents around 4,900 ratings per year so what
+                    The general tread is most of our roads are in the middle of the ratings scale. After compiling three
+                    years of data I felt like it was ok to stop there as the tread was seen each year. Each of these
+                    lines represents around 4,900 ratings per year so what
                     you're seeing is around 14,700 ratings mapped to this graph.
                 </p>
             </div>
@@ -60,31 +65,34 @@
             </div>
         </div>
         <div class="row pie">
-          <hr />
-                <div class="col-md-6">
+            <hr />
+            <div class="col-md-6">
 
-                    <h2 class="chartTitle">Year: 2001</h2>
-                    <canvas id="pieChart2" height="300" width="300"></canvas>
-                </div>
-                <div class="col-md-6">
-                    <h2 class="chartTitle">Year: 2015</h2>
-                    <canvas id="pieChart" height="300" width="300"></canvas>
-                </div>
+                <h2 class="chartTitle">Year: 2001</h2>
+                <canvas id="pieChart2" height="300" width="300"></canvas>
             </div>
-            <div class="row">
+            <div class="col-md-6">
+                <h2 class="chartTitle">Year: 2015</h2>
+                <canvas id="pieChart" height="300" width="300"></canvas>
+            </div>
+        </div>
+        <div class="row">
 
 
             <div class="col-md-12">
                 <h1>Pavement Types</h1>
                 <p style="text-indent: 50px;">
-                    You're seeing the breakdown of pavement type in years 2001 and 2015. The ratio of pavement types remains about the same. Around 100 roads out of just over 3,000 are full depth aspahlt with no base of any kind. Roads with 3+ inches of asphalt over a concrete base account for about 60% of roads on the data collected in both recordings.
+                    You're seeing the breakdown of pavement type in years 2001 and 2015. The ratio of pavement types
+                    remains about the same. Around 100 roads out of just over 3,000 are full depth aspahlt with no base
+                    of any kind. Roads with 3+ inches of asphalt over a concrete base account for about 60% of roads on
+                    the data collected in both recordings.
                 </p>
 
             </div>
-            </div>
+        </div>
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script src="../js/ratings.js"></script>
     <script src="../js/pavement.js"></script>
     <script src="../js/pavement2001.js"></script>

@@ -363,11 +363,6 @@ h2.page-header, h3.page-header, h4.page-header {
 .jobList tr {
     border-bottom: 1px solid #eee;
 }
-<<<<<<< HEAD
-
-.completed {
-    display: inline-block;
-=======
 .myPicture{
   max-width:200px;
   max-height:200px;
@@ -375,7 +370,6 @@ h2.page-header, h3.page-header, h4.page-header {
   margin:auto;
   margin-top:5px;
   border-radius:200px;
->>>>>>> origin/master
 }
 
 #scatterplot {
@@ -401,17 +395,12 @@ h2.page-header, h3.page-header, h4.page-header {
     padding-left: 10px;
 }
 
-<<<<<<< HEAD
-.chartHeading {
-    color: #888;
-=======
 #mobileWarning{
   display:none;
 }
 
 .blueTeam{
   color:blue;
->>>>>>> origin/master
 }
 
 .list tr:nth-child(odd) {
